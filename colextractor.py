@@ -15,9 +15,6 @@ from spacy_streamlit.util import load_model, process_text, get_svg, LOGO
 
 import psycopg2
 
-DATABASE_URL = os.environ['postgres://vrrdsjqzfafaad:27376e6b98f19f16ac9cad0e3fcc5819bbc0a18164b0c1aa3112d925eea32cb4@ec2-54-159-175-113.compute-1.amazonaws.com:5432/d8rq5ma53326nj']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-os.chdir(conn)
 
 # I should really split these functions into other files, but it is tricky
 # because I haven't managed my vars well...
