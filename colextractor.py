@@ -2,7 +2,7 @@ import os
 import pickle
 import pandas as pd
 import numpy as np
-
+import pickle5 as pickle
 from typing import Optional, Dict, Any, List
 
 import spacy
