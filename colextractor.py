@@ -154,8 +154,8 @@ st.header("Collocation Candidate Statistics")
 
 @st.cache
 def my_calc(textextractions):
-    if os.path.isfile('Bigram Stats.pickle'):
-        df1 = pd.read_pickle('Bigram Stats.pickle')
+    if os.path.isfile('OANCBigramStats.pickle'):
+        df1 = pd.read_pickle('OANCBigramStats.pickle')
     num_candidates = 7389634
 
     common_cols = ["Collocation Type", "Headword Lemma", "Headword Tag", "Dependent Word Lemma", "Dependent Word Tag"]
