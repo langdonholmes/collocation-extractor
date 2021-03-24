@@ -13,9 +13,6 @@ from spacy.matcher import DependencyMatcher
 import streamlit as st
 from spacy_streamlit.util import load_model, process_text, get_svg, LOGO
 
-import psycopg2
-
-
 # I should really split these functions into other files, but it is tricky
 # because I haven't managed my vars well...
 
@@ -61,7 +58,6 @@ def visualize_parser(docs: List[spacy.tokens.Doc], *, title: Optional[str] = Non
                 st.write(get_svg(html), unsafe_allow_html=True)
 
 # Cosmetics
-
 
 st.sidebar.markdown(LOGO, unsafe_allow_html=True)
 st.sidebar.title('Collocations')
@@ -170,10 +166,10 @@ def my_calc(textextractions):
     df = df.assign(r_1=lambda x: x["o_11"] + x["o_21"],
                     c_1=lambda x: x['o_11'] + x['o_12'],
                     e_11=lambda x: x['r_1'] * x['c_1'] / num_candidates,
-                    mi=lambda x: np.log2(x['o_11'] / x['e_11']))
-    df = df.assign(t=lambda x: (x['o_11'] - x['e_11']) / np.sqrt(x['o_11']))
+                    MI=lambda x: np.log2(x['o_11'] / x['e_11']))
+    df = df.assign(T=lambda x: (x['o_11'] - x['e_11']) / np.sqrt(x['o_11']))
 
-    output = df.loc[:, ("Headword Lemma", "Dependent Word Lemma", "t", "mi")]
+    output = df.loc[:, ("Headword Lemma", "Dependent Word Lemma", "T", "MI")]
     output['Reference Frequency'] = df['o_11']
     return(output)
 

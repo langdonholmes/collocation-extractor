@@ -1,6 +1,6 @@
 # colextractor
 
-This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some of the dependency visualizer code to display a subset of dependencies, rather than the full dependency tree. Also included is some code for calculating measures of association strength (on bigrams, dependency bigrams, or 'collocation candidates').
+This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some of the dependency visualizer code to display a subset of the dependencies, rather than the full dependency tree. Also included is some code for calculating measures of association strength, see Evert (2016) for details.
 
 
 # spacy-streamlit
