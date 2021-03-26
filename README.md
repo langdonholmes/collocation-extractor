@@ -5,7 +5,7 @@ This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some o
 
 # dependency labels
 
-spaCy uses [ClearNLP Dependency Labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md). matcherPatterns.pickle in this repository leverages spaCy's dependency matcher to filter the ClearNLP dependencies into the POS pairing notation widely used in Applied Linguistics (NOUN + VERB, for example). 
+spaCy uses [ClearNLP Dependency Labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md). matcherPatterns.pickle in this repository leverages spaCy's dependency matcher to filter the ClearNLP dependencies into the POS pairing notation widely used in Applied Linguistics (NOUN + VERB, for example). The schema is based on [Bhalla and Klimcikova (2019)](https://github.com/vishalbhalla/autocoleval), whose work is designed to align with the ACL (Ackermann and Chen, 2013).
 
 # spacy-streamlit
 
