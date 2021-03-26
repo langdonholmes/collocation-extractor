@@ -9,6 +9,8 @@ This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some o
 
 *** insert table here ***
 
+Machine learning methods applied directly to spaCy's labelling schema could likely provide deeper insights here. Det + Noun combinations, for example, may be inversely correlated with writing quality, a feature that is overlooked with these schema.
+
 ## the study
 
 To investigate word patterns and lexical development in the ICNALE corpus. These are argumentative essays written by English language learners.
