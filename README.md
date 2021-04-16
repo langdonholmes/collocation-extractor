@@ -4,9 +4,26 @@ This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some o
 
 ## dependency labels
 
-[spaCy](https://spacy.io) uses [ClearNLP Dependency Labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md). `matcherPatterns.pickle` in this repository leverages spaCy's dependency matcher to filter the ClearNLP dependencies into the POS pairing notation widely used in Applied Linguistics (NOUN + VERB, for example). The schema is designed to align with the ACL (Ackermann and Chen, 2013).
+[spaCy](https://spacy.io) uses [ClearNLP Dependency Labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md). `matcherPatterns.pickle` in this repository leverages spaCy's dependency matcher to filter the ClearNLP dependencies into the POS pairing notation widely used in Applied Linguistics (NOUN + VERB, for example). The schema is designed to align with the ACL (Ackermann and Chen, 2013), but also includes some additional combinations. The additional collocations can be easily filterd out later, or the schema can be customized.
 
-*** insert table here ***
+| label        | headPOS | depPOS |
+|--------------|---------|--------|
+| NOUN + ADJ   | NOUN    | ADJ    |
+| NOUN + NOUN  | NOUN    | NOUN   |
+| VERB + NOUN  | VERB    | NOUN   |
+| VERB + ADJ   | VERB    | ADJ    |
+| VERB + ADV   | VERB    | ADV    |
+| ADJ + ADV    | ADJ     | ADV    |
+| NON-ACL below this point        |
+| VERB + PART  | VERB    | PART   |
+| VERB + PREP  | VERB    | ADP    |
+| VERB + VERB  | VERB    | VERB   |
+| NOUN + DET   | NOUN    | DET    |
+| VERB + PREP  | VERB    | ADP    |
+| PREP + NOUN  | ADP     | NOUN   |
+| NOUN + PREP  | NOUN    | ADP    |
+| VERB + AUX   | VERB    | AUX    |
+| VERB  + VERB | VERB    | VERB   |
 
 Machine learning methods applied directly to spaCy's labelling schema could likely provide deeper insights here. Det + Noun combinations, for example, may be inversely correlated with writing quality, a feature that is overlooked with these schema.
 
