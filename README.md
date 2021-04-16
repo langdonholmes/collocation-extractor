@@ -23,7 +23,6 @@ This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some o
 | PREP + NOUN  | ADP     | NOUN   |
 | NOUN + PREP  | NOUN    | ADP    |
 | VERB + AUX   | VERB    | AUX    |
-| VERB  + VERB | VERB    | VERB   |
 
 Machine learning methods applied directly to spaCy's labelling schema could likely provide deeper insights here. Det + Noun combinations, for example, may be inversely correlated with writing quality, a feature that is overlooked with these schema.
 
