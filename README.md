@@ -15,16 +15,13 @@ This is a simple hack of [spaCy](https://spacy.io) streamlit. It rewrites some o
 | VERB + ADV   | VERB    | ADV    |
 | ADJ + ADV    | ADJ     | ADV    |
 | NON-ACL below this point        |
+| NOUN + DET   | NOUN    | DET    |
+| NOUN + PREP  | NOUN    | ADP    |
+| PREP + NOUN  | ADP     | NOUN   |
 | VERB + PART  | VERB    | PART   |
 | VERB + PREP  | VERB    | ADP    |
 | VERB + VERB  | VERB    | VERB   |
-| NOUN + DET   | NOUN    | DET    |
-| VERB + PREP  | VERB    | ADP    |
-| PREP + NOUN  | ADP     | NOUN   |
-| NOUN + PREP  | NOUN    | ADP    |
 | VERB + AUX   | VERB    | AUX    |
-
-Machine learning methods applied directly to spaCy's labelling schema could likely provide deeper insights here. Det + Noun combinations, for example, may be inversely correlated with writing quality, a feature that is overlooked with these schema.
 
 ## the study
 
